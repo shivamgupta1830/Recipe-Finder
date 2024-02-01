@@ -20,6 +20,7 @@ const searchRecipes = async (query) => {
     `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
   );
   const response = await data.json();
+  console.log(response.meals);
 
   container.innerHTML = "";
   response.meals.forEach((meal) => {
@@ -42,17 +43,39 @@ const searchRecipes = async (query) => {
     viewButton.addEventListener("click", () => {
       details.style.display = "block";
       container.style.filter = "blur(3px)";
+
+      const youtubeId = meal.strYoutube.slice(32, meal.strYoutube.length);
+
+      console.log(youtubeId);
+
+      content.innerHTML = `
+
+      <h2>${meal.strMeal}</h2>
+      <h3>Ingredients</h3>
+      <ul><li>abcdefgkfi</li>
+      <li>abcdefgkfi</li>
+      <li>abcdefgkfi</li>
+      <li>abcdefgkfi</li>
+      <li>abcdefgkfi</li>
+      <li>abcdefgkfi</li>
+      <li>abcdefgkfi</li>
+      <li>abcdefgkfi</li>
+      <li>abcdefgkfi</li>
+      <li>abcdefgkfi</li></ul>
+      <h3>Instructions</h3>
+      <p>${meal.strInstructions}</p>
+      <h3>Video Instructions</h3>
+      
+      <iframe height="250" width="350"
+            src="https://www.youtube.com/embed/${youtubeId}">
+      </iframe>`;
     });
   });
 };
-// container.innerHTML = "<h2>Search your favorite recepies here..🍲</h2>";
+
 searchBtn.addEventListener("click", () => {
   const searchInput = searchText.value.trim();
   console.log(searchInput);
-
-  // if (searchInput) {
-  //   container.innerHTML = "";
-  // }
 
   searchRecipes(searchInput);
 });
