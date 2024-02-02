@@ -127,7 +127,7 @@ const searchRecipes = async (query) => {
         <p>${meal.strInstructions}</p>
         <h3>Video Instructions</h3>
         
-        <iframe height="250" width="350"
+        <iframe class="video"
               src="https://www.youtube.com/embed/${youtubeId}">
         </iframe>`;
       });

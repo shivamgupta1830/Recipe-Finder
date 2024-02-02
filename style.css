@@ -215,7 +215,6 @@ nav-links ul li a:active {
 
 .recipe-details {
   display: none;
-
   position: fixed;
   top: 55%;
   left: 50%;
@@ -253,6 +252,7 @@ nav-links ul li a:active {
   color: whitesmoke;
   font-size: 14px;
   margin-block: 5px;
+  list-style-type: none;
 }
 
 .recipe-details-content p {
@@ -278,17 +278,19 @@ nav-links ul li a:active {
   font-size: 22px;
   text-align: center;
   position: sticky;
+  top: -100px;
 
-  top: 0px;
   left: 1000px;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
 }
 .recipe-details button:hover {
   background-color: rgb(188, 243, 243);
+  scale: 1.05;
 }
 .recipe-details button:active {
   background-color: rgb(150, 218, 218);
+  scale: 1.05;
 }
 
 footer {
@@ -574,15 +576,13 @@ body::-webkit-scrollbar-track {
 }
 
 .recipe-details::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 .recipe-details::-webkit-scrollbar-thumb {
   background-color: rgb(230, 238, 247);
 }
 .recipe-details::-webkit-scrollbar-track {
   background: linear-gradient(to top, rgb(2, 88, 88), rgb(2, 120, 120));
-
-  width: 125px;
 }
 
 /* Loader############################### */
