@@ -12,7 +12,8 @@ const indianLink = document.querySelector(".indian-link");
 const links = document.querySelectorAll(".link");
 const navlist = document.querySelector(".nav-list");
 const nav = document.getElementById("nav");
-const arrow = document.querySelector(".arrow");
+const up = document.getElementById("up");
+const down = document.getElementById("down");
 
 searchBtn.addEventListener("click", () => {
   const searchInput = searchText.value.trim();
@@ -204,10 +205,26 @@ const fetchIngredients = (meal) => {
 
 //  #############################################################
 
-arrow.addEventListener("click", () => {
-  navlist.style.display = "flex";
-  arrow.setAttribute("name", "chevron-up-outline");
+// arrow.addEventListener("click", () => {
+//   navlist.style.display = "flex";
+//   arrow.setAttribute("name", "chevron-up-outline");
 
-  // navlist.style.display = "none";
-  // arrow.setAttribute("name", "chevron-down-outline");
-});
+//   // navlist.style.display = "none";
+//   // arrow.setAttribute("name", "chevron-down-outline");
+// });
+
+if (up) {
+  up.addEventListener("click", () => {
+    up.style.display = "none";
+    down.style.display = "block";
+    navlist.style.display = "flex";
+  });
+}
+
+if (down) {
+  down.addEventListener("click", () => {
+    down.style.display = "none";
+    up.style.display = "block";
+    navlist.style.display = "none";
+  });
+}
