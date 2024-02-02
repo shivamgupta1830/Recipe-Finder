@@ -428,7 +428,7 @@ footer {
 
   .recipe-card {
     width: 250px;
-    height: 400px;
+    height: 350px;
   }
   .recipe-card img {
     height: 150px;
@@ -466,7 +466,7 @@ footer {
   }
 
   .recipe-container h2 {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .recipe-img {
@@ -517,11 +517,19 @@ footer {
     font-weight: 600;
     color: rgb(2, 88, 88);
   }
+  .recipe-container h2 {
+    font-size: 8px;
+  }
   .recipe-card {
     width: 225px;
+
+    height: 325px;
   }
   .recipe-card img {
     height: 120px;
+  }
+  .recipe-card button {
+    font-size: 11px;
   }
   .arrow {
     top: 70px;
@@ -542,8 +550,9 @@ footer {
   }
   .recipe-card {
     width: 200px;
-    height: 320px;
+    height: 300px;
   }
+
   .recipe-card img {
     height: 100px;
   }
