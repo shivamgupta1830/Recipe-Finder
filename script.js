@@ -76,7 +76,7 @@ links.forEach((link) => {
         });
       });
     } catch (error) {
-      container.innerHTML = `<div class="error"><h2> Error in fetching recipes...</h2> <img src="./error.png"  alt="404-image" width="50%"/></div>`;
+      container.innerHTML = `<div class="error"><h2> <span>Error</span> in fetching recipes...</h2> <img src="./error.png"  alt="404-image" width="50%"/></div>`;
     }
   });
 });
@@ -133,7 +133,7 @@ const searchRecipes = async (query) => {
       });
     });
   } catch (error) {
-    container.innerHTML = `<div class="error"><h2> Error in fetching recipes...</h2> <img src="./error.png"  alt="404-image" width="50%"/></div>`;
+    container.innerHTML = `<div class="error"><h2> <span>Error</span> in fetching recipes...</h2> <img src="./error.png"  alt="404-image" width="50%"/></div>`;
   }
 };
 
