@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="nav">
         <h1><a href="./index.html">Recipe Finder</a></h1>
         <div class="search-box">
           <input
@@ -23,18 +23,21 @@
         </div>
 
         <nav-links>
-          <ul>
+          <ul class="nav-list">
             <li><a href="./index.html" class="home">Home</a></li>
             <li><a href="./indian.html" class="indian link">Indian</a></li>
             <li><a href="./chinese.html" class="chinese link">Chinese</a></li>
             <li><a href="./american.html" class="italian link">American</a></li>
           </ul>
         </nav-links>
+
+        <ion-icon name="chevron-down-outline" class="arrow"></ion-icon>
+        <!-- <ion-icon name="chevron-up-outline"></ion-icon> -->
       </nav>
     </header>
     <main>
       <div class="recipe-container">
-        <div class=".recipe-container-front">
+        <div class="recipe-container-front">
           <h2>Search your favourite recipes here...</h2>
           <div class="recipe-img"></div>
         </div>
@@ -43,23 +46,7 @@
         <button type="button" class="recipe-close-btn">
           <ion-icon name="close-circle-outline"></ion-icon>
         </button>
-        <div class="recipe-details-content">
-          <!-- <h2>cheese</h2>
-          <h3>Ingredients</h3>
-          <ul><li>abcdefgkfi</li>
-          <li>abcdefgkfi</li>
-          <li>abcdefgkfi</li>
-          <li>abcdefgkfi</li>
-          <li>abcdefgkfi</li>
-          <li>abcdefgkfi</li>
-          <li>abcdefgkfi</li>
-          <li>abcdefgkfi</li>
-          <li>abcdefgkfi</li>
-          <li>abcdefgkfi</li></ul>
-          <h3>instructions</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus optio obcaecati nisi est voluptatum id quaerat ducimus cumque provident, praesentium eaque eum rerum adipisci facere architerror voluptatibus iusto commodi quo nam cupiditate vitae, p
-          </p> -->
-        </div>
+        <div class="recipe-details-content"></div>
       </div>
     </main>
 
