@@ -461,8 +461,8 @@ footer {
     transition: all 0.25s ease-in-out;
     background-color: transparent;
     position: absolute;
-    right: 48px;
-    top: 68px;
+    right: 40px;
+    top: 69px;
   }
 
   .arrow:hover {
