@@ -7,13 +7,13 @@ const content = document.querySelector(".recipe-details-content");
 
 const indian = document.querySelector(".indian");
 const chinese = document.querySelector(".chinese");
-const italian = document.querySelector(".american");
+const italian = document.querySelector(".italian");
 const indianLink = document.querySelector(".indian-link");
 const links = document.querySelectorAll(".link");
 const navlist = document.querySelector(".nav-list");
 const nav = document.getElementById("nav");
-const up = document.getElementById("up");
-const down = document.getElementById("down");
+
+const arrow = document.querySelector(".arrow");
 
 searchBtn.addEventListener("click", () => {
   const searchInput = searchText.value.trim();
@@ -205,26 +205,29 @@ const fetchIngredients = (meal) => {
 
 //  #############################################################
 
-// arrow.addEventListener("click", () => {
-//   navlist.style.display = "flex";
-//   arrow.setAttribute("name", "chevron-up-outline");
-
-//   // navlist.style.display = "none";
-//   // arrow.setAttribute("name", "chevron-down-outline");
+// up.addEventListener("click", (e) => {
+//   up.classList.toggle("active");
 // });
 
-if (up) {
-  up.addEventListener("click", () => {
-    up.style.display = "none";
-    down.style.display = "block";
-    navlist.style.display = "flex";
-  });
-}
+arrow.addEventListener("click", () => {
+  const text = arrow.innerHTML;
 
-if (down) {
-  down.addEventListener("click", () => {
-    down.style.display = "none";
-    up.style.display = "block";
-    navlist.style.display = "none";
-  });
-}
+  text === "⇧" ? (arrow.innerHTML = "⇩") : (arrow.innerHTML = "⇧");
+  navlist.classList.toggle("show");
+});
+
+// if (up) {
+//   up.addEventListener("click", () => {
+//     up.style.display = "none";
+//     down.style.display = "block";
+//     navlist.style.display = "flex";
+//   });
+// }
+
+// if (down) {
+//   down.addEventListener("click", () => {
+//     down.style.display = "none";
+//     up.style.display = "block";
+//     navlist.style.display = "none";
+//   });
+// }
